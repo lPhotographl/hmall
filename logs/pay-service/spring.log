@@ -32,3 +32,61 @@
 17:52:03:402  INFO 21305 --- [RMI TCP Connection(4)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 17:52:03:403  INFO 21305 --- [RMI TCP Connection(4)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
 17:52:04:527  INFO 21305 --- [RMI TCP Connection(1)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+18:10:15:193  INFO 21305 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+18:10:15:894  INFO 21305 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+18:10:17:281  INFO 23426 --- [main] com.hmall.pay.payApplication             : Starting payApplication using Java 11.0.29 on mazhitaodeMac-mini.local with PID 23426 (/Users/dark/Documents/IDEA/hmall/pay-service/target/classes started by dark in /Users/dark/Documents/IDEA/hmall)
+18:10:17:282 DEBUG 23426 --- [main] com.hmall.pay.payApplication             : Running with Spring Boot v2.7.12, Spring v5.3.27
+18:10:17:283  INFO 23426 --- [main] com.hmall.pay.payApplication             : The following 1 profile is active: "dev"
+18:10:17:785  INFO 23426 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8083 (http)
+18:10:17:795  INFO 23426 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+18:10:17:795  INFO 23426 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+18:10:17:834  INFO 23426 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+18:10:17:835  INFO 23426 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 530 ms
+18:10:18:188  INFO 23426 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+18:10:18:206  INFO 23426 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8083 (http) with context path ''
+18:10:18:213  INFO 23426 --- [main] com.hmall.pay.payApplication             : Started payApplication in 1.111 seconds (JVM running for 1.448)
+18:10:18:519  INFO 23426 --- [RMI TCP Connection(1)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+18:10:18:520  INFO 23426 --- [RMI TCP Connection(3)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+18:10:18:521  INFO 23426 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+18:10:18:522  INFO 23426 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+18:10:19:697  INFO 23426 --- [RMI TCP Connection(3)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+18:14:05:669  INFO 23426 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+18:14:06:377  INFO 23426 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+18:14:09:368  INFO 23828 --- [main] com.hmall.pay.payApplication             : Starting payApplication using Java 11.0.29 on mazhitaodeMac-mini.local with PID 23828 (/Users/dark/Documents/IDEA/hmall/pay-service/target/classes started by dark in /Users/dark/Documents/IDEA/hmall)
+18:14:09:370 DEBUG 23828 --- [main] com.hmall.pay.payApplication             : Running with Spring Boot v2.7.12, Spring v5.3.27
+18:14:09:370  INFO 23828 --- [main] com.hmall.pay.payApplication             : The following 1 profile is active: "dev"
+18:14:09:838  INFO 23828 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=2d727b36-1852-3d26-ae39-3b20bb68c5cd
+18:14:09:971  INFO 23828 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8083 (http)
+18:14:09:975  INFO 23828 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+18:14:09:975  INFO 23828 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+18:14:10:032  INFO 23828 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+18:14:10:032  INFO 23828 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 643 ms
+18:14:10:459  INFO 23828 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+18:14:10:501  INFO 23828 --- [main] com.alibaba.nacos.common.remote.client   : [RpcClientFactory] create a new rpc client of 9cfd2d8f-806b-41bf-8551-e0e5df063c0c
+18:14:10:517  INFO 23828 --- [main] org.reflections.Reflections              : Reflections took 9 ms to scan 1 urls, producing 3 keys and 6 values 
+18:14:10:526  INFO 23828 --- [main] org.reflections.Reflections              : Reflections took 4 ms to scan 1 urls, producing 4 keys and 9 values 
+18:14:10:531  INFO 23828 --- [main] org.reflections.Reflections              : Reflections took 4 ms to scan 1 urls, producing 3 keys and 10 values 
+18:14:10:532  WARN 23828 --- [main] org.reflections.Reflections              : given scan urls are empty. set urls in the configuration
+18:14:10:535  INFO 23828 --- [main] org.reflections.Reflections              : Reflections took 3 ms to scan 1 urls, producing 1 keys and 5 values 
+18:14:10:539  INFO 23828 --- [main] org.reflections.Reflections              : Reflections took 3 ms to scan 1 urls, producing 1 keys and 7 values 
+18:14:10:543  INFO 23828 --- [main] org.reflections.Reflections              : Reflections took 3 ms to scan 1 urls, producing 2 keys and 8 values 
+18:14:10:544  WARN 23828 --- [main] org.reflections.Reflections              : given scan urls are empty. set urls in the configuration
+18:14:10:544  INFO 23828 --- [main] com.alibaba.nacos.common.remote.client   : [9cfd2d8f-806b-41bf-8551-e0e5df063c0c] RpcClient init label, labels = {module=naming, source=sdk}
+18:14:10:544  INFO 23828 --- [main] com.alibaba.nacos.common.remote.client   : [9cfd2d8f-806b-41bf-8551-e0e5df063c0c] RpcClient init, ServerListFactory = com.alibaba.nacos.client.naming.core.ServerListManager
+18:14:10:545  INFO 23828 --- [main] com.alibaba.nacos.common.remote.client   : [9cfd2d8f-806b-41bf-8551-e0e5df063c0c] Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.redo.NamingGrpcRedoService
+18:14:10:545  INFO 23828 --- [main] com.alibaba.nacos.common.remote.client   : [9cfd2d8f-806b-41bf-8551-e0e5df063c0c] Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
+18:14:10:545  INFO 23828 --- [main] com.alibaba.nacos.common.remote.client   : [9cfd2d8f-806b-41bf-8551-e0e5df063c0c] Try to connect to server on start up, server: {serverIp = '49.235.39.92', server main port = 8848}
+18:14:11:056  INFO 23828 --- [main] com.alibaba.nacos.common.remote.client   : [9cfd2d8f-806b-41bf-8551-e0e5df063c0c] Success to connect to server [49.235.39.92:8848] on start up, connectionId = 1764843251051_218.84.124.103_23974
+18:14:11:057  INFO 23828 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [9cfd2d8f-806b-41bf-8551-e0e5df063c0c] Notify connected event to listeners.
+18:14:11:058  INFO 23828 --- [main] com.alibaba.nacos.common.remote.client   : [9cfd2d8f-806b-41bf-8551-e0e5df063c0c] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+18:14:11:058  INFO 23828 --- [main] com.alibaba.nacos.common.remote.client   : [9cfd2d8f-806b-41bf-8551-e0e5df063c0c] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$1102/0x0000000800796c40
+18:14:11:183  INFO 23828 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8083 (http) with context path ''
+18:14:11:258  INFO 23828 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP pay-service 192.168.1.3:8083 register finished
+18:14:11:279  INFO 23828 --- [main] com.hmall.pay.payApplication             : Started payApplication in 2.174 seconds (JVM running for 2.567)
+18:14:11:630  INFO 23828 --- [RMI TCP Connection(4)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+18:14:11:631  INFO 23828 --- [RMI TCP Connection(3)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+18:14:11:631  INFO 23828 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+18:14:11:634  INFO 23828 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+18:14:11:689  INFO 23828 --- [nacos-grpc-client-executor-10] com.alibaba.nacos.common.remote.client   : [9cfd2d8f-806b-41bf-8551-e0e5df063c0c] Receive server push request, request = NotifySubscriberRequest, requestId = 190
+18:14:11:691  INFO 23828 --- [nacos-grpc-client-executor-10] com.alibaba.nacos.common.remote.client   : [9cfd2d8f-806b-41bf-8551-e0e5df063c0c] Ack server push request, request = NotifySubscriberRequest, requestId = 190
+18:14:12:829  INFO 23828 --- [RMI TCP Connection(4)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.

@@ -1,6 +1,9 @@
 server:
   port: 8083
 spring:
+  cloud:
+    nacos:
+      server-addr: 49.235.39.92:8848
   application:
     name: pay-service
   profiles:
@@ -10,6 +13,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
     password: mysql_zaPeJ8
+
 mybatis-plus:
   configuration:
     default-enum-type-handler: com.baomidou.mybatisplus.core.handlers.MybatisEnumTypeHandler
@@ -27,8 +31,8 @@ logging:
 knife4j:
   enable: false
   openapi:
-    title: 黑马商城接口文档
-    description: "黑马商城接口文档"
+    title: 黑马商城支付服务接口文档
+    description: "黑马商城支付服务接口文档"
     email: itheima@itcast.cn
     concat: itheima
     url: https://www.itcast.cn
