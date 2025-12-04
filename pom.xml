@@ -17,6 +17,7 @@
         <module>hm-api</module>
         <module>hm-user</module>
         <module>trade-service</module>
+        <module>hm-GateWay</module>
     </modules>
 
     <parent>

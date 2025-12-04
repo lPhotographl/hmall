@@ -1,0 +1,32 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: hm-gateway
+  cloud:
+    nacos:
+      server-addr: 49.235.39.92:8848
+    gateway:
+      routes:
+        - id: cart
+          uri: lb://cart-service
+          predicates:
+            - Path=/carts/**
+        - id: item
+          uri: lb://item-service
+          predicates:
+            - Path=/api/items/**
+          filters:
+            - StripPrefix=1
+        - id: order
+          uri: lb://trade-service
+          predicates:
+            - Path=/orders/**
+        - id: pay
+          uri: lb://pay-service
+          predicates:
+            - Path=/pay-orders/**
+        - id: user
+          uri: lb://hm-user
+          predicates:
+            - Path=/users/**
