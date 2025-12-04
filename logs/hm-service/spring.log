@@ -1,0 +1,20 @@
+16:31:04:630  INFO 63777 --- [main] com.hmall.HMallApplication               : Starting HMallApplication using Java 11.0.29 on mazhitaodeMac-mini.local with PID 63777 (/Users/dark/Documents/IDEA/hmall/hm-service/target/classes started by dark in /Users/dark/Documents/IDEA/hmall)
+16:31:04:633 DEBUG 63777 --- [main] com.hmall.HMallApplication               : Running with Spring Boot v2.7.12, Spring v5.3.27
+16:31:04:633  INFO 63777 --- [main] com.hmall.HMallApplication               : The following 1 profile is active: "dev"
+16:31:04:932  INFO 63777 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+16:31:04:933  INFO 63777 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+16:31:04:945  INFO 63777 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
+16:31:05:165  INFO 63777 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+16:31:05:168  INFO 63777 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+16:31:05:168  INFO 63777 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+16:31:05:215  INFO 63777 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+16:31:05:216  INFO 63777 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 561 ms
+16:31:05:993  INFO 63777 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+16:31:06:147  INFO 63777 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+16:31:06:148  INFO 63777 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+16:31:06:149  INFO 63777 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+16:31:06:159  INFO 63777 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+16:31:06:231  INFO 63777 --- [main] com.hmall.HMallApplication               : Started HMallApplication in 1.765 seconds (JVM running for 2.027)
+16:32:01:426  INFO 63777 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+16:32:01:427  INFO 63777 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+16:32:01:433  INFO 63777 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
