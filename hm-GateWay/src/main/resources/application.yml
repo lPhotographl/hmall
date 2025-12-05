@@ -28,3 +28,5 @@ spring:
           uri: lb://hm-user
           predicates:
             - Path=/users/**
+      default-filters:
+        - PrintAny
