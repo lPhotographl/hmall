@@ -15,9 +15,7 @@ spring:
         - id: item
           uri: lb://item-service
           predicates:
-            - Path=/api/items/**
-          filters:
-            - StripPrefix=1
+            - Path=/items/**
         - id: order
           uri: lb://trade-service
           predicates:
