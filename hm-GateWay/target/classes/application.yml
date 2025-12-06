@@ -1,5 +1,5 @@
 server:
-  port: 8080
+  port: 18080
 spring:
   application:
     name: hm-gateway
@@ -8,25 +8,72 @@ spring:
       server-addr: 49.235.39.92:8848
     gateway:
       routes:
+        # -----------------------------------------------------------
+        # 1. 购物车服务
+        # -----------------------------------------------------------
         - id: cart
           uri: lb://cart-service
           predicates:
-            - Path=/carts/**
+            - Path=/api/carts/** # 【修改】匹配前端发来的 /api/carts/...
+          filters:
+            - StripPrefix=1        # 【修改】砍掉 /api，转发给微服务的是 /carts/...
+
+        # -----------------------------------------------------------
+        # 2. 商品服务
+        # -----------------------------------------------------------
         - id: item
           uri: lb://item-service
           predicates:
-            - Path=/items/**
+            - Path=/api/items/** # 【修改】匹配 /api/items/...
+          filters:
+            - StripPrefix=1        # 【修改】砍掉 /api
+
+        # -----------------------------------------------------------
+        # 3. 交易服务 (订单)
+        # -----------------------------------------------------------
         - id: order
           uri: lb://trade-service
           predicates:
-            - Path=/orders/**
+            - Path=/api/orders/** # 【修改】匹配 /api/orders/...
+          filters:
+            - StripPrefix=1        # 【修改】砍掉 /api
+
+        # -----------------------------------------------------------
+        # 4. 支付服务
+        # -----------------------------------------------------------
         - id: pay
           uri: lb://pay-service
           predicates:
-            - Path=/pay-orders/**
+            - Path=/api/pay-orders/** # 【修改】匹配 /api/pay-orders/...
+          filters:
+            - StripPrefix=1           # 【修改】砍掉 /api
+
+        # -----------------------------------------------------------
+        # 5. 用户服务
+        # -----------------------------------------------------------
         - id: user
           uri: lb://hm-user
           predicates:
-            - Path=/users/**
+            - Path=/api/users/**
+          filters:
+            - StripPrefix=1
+
       default-filters:
         - PrintAny
+
+hm:
+  jwt:
+    location: classpath:hmall.jks
+    alias: hmall
+    password: hmall123
+    tokenTTL: 30m
+  auth:
+    excludePaths:
+      # =========================================================
+      # 鉴权白名单 (注意：这里必须写带 /api 的完整路径)
+      # =========================================================
+      - /api/search/**
+      - /api/users/login
+      - /api/users/register
+      - /api/items/** # 建议：商品列表通常不需要登录就能看，建议放行
+      - /hi

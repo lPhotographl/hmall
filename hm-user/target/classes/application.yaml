@@ -49,4 +49,8 @@ hm:
     location: classpath:hmall.jks
     alias: hmall
     password: hmall123
-    tokenTTL: 30m               # Token 有效期
+    tokenTTL: 30m
+  auth:
+    exclude-paths:
+      - /users/login
+      - /users/register

@@ -9,6 +9,7 @@ import javax.validation.constraints.NotNull;
 @FeignClient(value = "user-service", configuration = DefaultFeignConfig.class)
 public interface UserClient {
 
+
     /**
      * 扣减用户余额
      * @param pw 支付密码

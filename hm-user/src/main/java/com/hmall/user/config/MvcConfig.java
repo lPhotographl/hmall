@@ -42,6 +42,8 @@ public class MvcConfig implements WebMvcConfigurer {
             registration.excludePathPatterns(excludePaths);
         }
         registration.excludePathPatterns(
+                "/users/login",    // <--- 【新增】必须放行登录
+                "/users/register", // <--- 【新增】必须放行注册
                 "/error",
                 "/favicon.ico",
                 "/v2/**",

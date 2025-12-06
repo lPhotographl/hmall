@@ -9,6 +9,7 @@ import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,13 +17,15 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/users")
 @RequiredArgsConstructor
+@Slf4j
 public class UserController {
 
     private final IUserService userService;
 
     @ApiOperation("用户登录接口")
-    @PostMapping("login")
+    @PostMapping("/login")
     public UserLoginVO login(@RequestBody @Validated LoginFormDTO loginFormDTO){
+        log.info("用户登录请求参数:{}", loginFormDTO);
         return userService.login(loginFormDTO);
     }
 

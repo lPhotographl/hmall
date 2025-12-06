@@ -65,14 +65,8 @@ public class CartServiceImpl extends ServiceImpl<CartMapper, Cart> implements IC
 
 
         // 1.查询我的购物车列表
-       // List<Cart> carts = lambdaQuery().eq(Cart::getUserId, UserContext.getUser()).list();
+        List<Cart> carts = lambdaQuery().eq(Cart::getUserId, UserContext.getUser()).list();
 
-        // 假设用户 ID 是 1L
-        Long userIdForTest = 1L;
-
-        List<Cart> carts = lambdaQuery()
-                .eq(Cart::getUserId, userIdForTest) // 替换了 UserContext.getUser()
-                .list();
 
         if (CollUtils.isEmpty(carts)) {
             return Collections.emptyList();
