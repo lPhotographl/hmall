@@ -1,0 +1,16 @@
+server:
+  port: 8082
+spring:
+  application:
+    name: cart-service
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      server-addr: 49.235.39.92:8848
+      config: #共享配置信息
+        file-extension: yaml # 配置的扩展名
+        shared-configs:
+          - data-id: shared-jdbc.yaml
+          - data-id: shared-log.yaml
+          - data-id: shared-swagger.yaml

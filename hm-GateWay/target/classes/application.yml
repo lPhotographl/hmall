@@ -1,8 +1,5 @@
-server:
-  port: 18080
+
 spring:
-  application:
-    name: hm-gateway
   cloud:
     nacos:
       server-addr: 49.235.39.92:8848
@@ -24,7 +21,7 @@ spring:
         - id: item
           uri: lb://item-service
           predicates:
-            - Path=/api/items/** # 【修改】匹配 /api/items/...
+            - Path=/api/items/**, /api/search/list # 【修改】匹配 /api/items/... 和 /api/search/list
           filters:
             - StripPrefix=1        # 【修改】砍掉 /api
 
@@ -54,7 +51,7 @@ spring:
         - id: user
           uri: lb://hm-user
           predicates:
-            - Path=/api/users/**
+            - Path=/api/users/**, /api/addresses/**
           filters:
             - StripPrefix=1
 
@@ -72,7 +69,7 @@ hm:
       # =========================================================
       # 鉴权白名单 (注意：这里必须写带 /api 的完整路径)
       # =========================================================
-      - /api/search/**
+      - /api/search/list
       - /api/users/login
       - /api/users/register
       - /api/items/** # 建议：商品列表通常不需要登录就能看，建议放行
