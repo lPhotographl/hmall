@@ -7,7 +7,7 @@ spring:
     active: dev
   cloud:
     nacos:
-      server-addr: 49.235.39.92:8848
+      server-addr: 192.168.28.194:8848
       config: #共享配置信息
         file-extension: yaml # 配置的扩展名
         shared-configs:
@@ -15,3 +15,4 @@ spring:
           - data-id: shared-log.yaml
           - data-id: shared-swagger.yaml
           - data-id: shared-sentinel.yaml
+          - data-id: shared_rabbitMQ.yaml

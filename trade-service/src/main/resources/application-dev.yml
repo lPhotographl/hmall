@@ -1,7 +1,7 @@
 # 在 application-dev.yml 或 Nacos 配置中
 hm:
   db:
-    host: 49.235.39.92      # 对应 ${hm.db.host}
+    host: 192.168.28.194      # 对应 ${hm.db.host}
     user: root             # 对应 ${hm.db.user}
     password: mysql_zaPeJ8   # 对应 ${hm.db.password}
     db: hm-trade                # 对应 ${hm.db.db}，这个你之前没给默认值，这里必须配置！

@@ -1,6 +1,7 @@
 package com.hmall.user.config;
 
 import cn.hutool.core.collection.CollUtil;
+import com.hmall.common.utils.UserContext;
 import com.hmall.user.config.AuthProperties;
 import com.hmall.user.interceptor.LoginInterceptor;
 import com.hmall.user.utils.JwtTool;
@@ -11,6 +12,8 @@ import org.springframework.web.servlet.config.annotation.InterceptorRegistration
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
 @Configuration
@@ -18,40 +21,24 @@ import java.util.List;
 @EnableConfigurationProperties(AuthProperties.class)
 public class MvcConfig implements WebMvcConfigurer {
 
-   private final JwtTool jwtTool;
-   private final AuthProperties authProperties;
-
-/*    @Bean
-    public CommonExceptionAdvice commonExceptionAdvice(){
-        return new CommonExceptionAdvice();
-    }*/
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        // 1.添加拦截器
-        LoginInterceptor loginInterceptor = new LoginInterceptor(jwtTool);
-        InterceptorRegistration registration = registry.addInterceptor(loginInterceptor);
-        // 2.配置拦截路径
-        List<String> includePaths = authProperties.getIncludePaths();
-        if (CollUtil.isNotEmpty(includePaths)) {
-            registration.addPathPatterns(includePaths);
-        }
-        // 3.配置放行路径
-        List<String> excludePaths = authProperties.getExcludePaths();
-        if (CollUtil.isNotEmpty(excludePaths)) {
-            registration.excludePathPatterns(excludePaths);
-        }
-        registration.excludePathPatterns(
-                "/users/login",    // <--- 【新增】必须放行登录
-                "/users/register", // <--- 【新增】必须放行注册
-                "/error",
-                "/favicon.ico",
-                "/v2/**",
-                "/v3/**",
-                "/swagger-resources/**",
-                "/webjars/**",
-                "/doc.html"
-                );
-
+        // 1. 注册一个全新的、极简的拦截器
+        // 这个 LoginInterceptor 内部只做：getHeader("user-info") -> UserContext.set()
+        registry.addInterceptor(new LoginInterceptor())
+                .addPathPatterns("/**") // 拦截所有
+                .excludePathPatterns(   // 【关键点】放行名单
+                        "/users/login",    // 放行登录接口
+                        "/users/register", // 放行注册接口
+                        "/error",
+                        "/favicon.ico",
+                        "/swagger-resources/**",
+                        "/webjars/**",
+                        "/v3/**",
+                        "/doc.html"
+                ); // 仅放行极少数系统路径
     }
+
+
 }

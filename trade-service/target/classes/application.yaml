@@ -1,4 +1,3 @@
-
 feign:
   okhttp:
     enabled: true # 你开启了 OKHttp，这很好

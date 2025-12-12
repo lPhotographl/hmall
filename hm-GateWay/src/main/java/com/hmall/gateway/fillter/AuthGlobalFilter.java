@@ -46,6 +46,12 @@ public class AuthGlobalFilter implements GlobalFilter, Ordered {
         List<String> headers = request.getHeaders().get("authorization");
         if (!CollUtils.isEmpty(headers)) {
             token = headers.get(0);
+
+            // 【新增代码】处理 Bearer 前缀
+            // 如果 Header 里的值是以 "Bearer " 开头（注意后面有个空格），就截取掉
+            if (token != null && token.startsWith("Bearer ")) {
+                token = token.substring(7);
+            }
         }
 
         // 4. 解析并校验 Token
