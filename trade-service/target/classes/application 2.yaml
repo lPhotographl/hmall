@@ -1,0 +1,9 @@
+
+feign:
+  okhttp:
+    enabled: true # 你开启了 OKHttp，这很好
+  client:
+    config:
+      default: # 这里配置全局默认规则
+        loggerLevel: FULL # 🚨 强制设置全局日志级别为 FULL
+
