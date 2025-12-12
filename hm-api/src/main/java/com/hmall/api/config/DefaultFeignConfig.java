@@ -1,5 +1,6 @@
 package com.hmall.api.config;
 
+import com.hmall.api.fallback.itemClientFallback;
 import com.hmall.common.utils.UserContext;
 import feign.Logger;
 import feign.RequestInterceptor;
@@ -9,6 +10,12 @@ import org.springframework.context.annotation.Configuration; // 如果启动类�
 
 @Configuration
 public class DefaultFeignConfig {
+
+    // 3. 【新增】Feign 客户端 fallback 工厂 (处理服务调用失败)
+    @Bean
+    public itemClientFallback itemClientFallback() {
+        return new itemClientFallback();
+    }
 
     // 1. 保留你原来的日志配置 (调试用)
     @Bean

@@ -251,3 +251,174 @@
 14:35:13:234  INFO 51558 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=hm-gateway.yaml, group=DEFAULT_GROUP
 14:35:13:534  INFO 51558 --- [nacos-grpc-client-executor-9] com.alibaba.nacos.common.remote.client   : [517c13b6-f270-423e-8983-ca577a72a30e] Receive server push request, request = NotifySubscriberRequest, requestId = 2838
 14:35:13:535  INFO 51558 --- [nacos-grpc-client-executor-9] com.alibaba.nacos.common.remote.client   : [517c13b6-f270-423e-8983-ca577a72a30e] Ack server push request, request = NotifySubscriberRequest, requestId = 2838
+14:38:59:008  WARN 51558 --- [reactor-http-nio-2] c.h.gateway.fillter.AuthGlobalFilter     : 身份校验失败，拦截请求: /api/carts，原因: 无效的token
+14:39:04:761  INFO 51558 --- [reactor-http-nio-3] c.hmall.gateway.fillter.MyGlobalFilter   : 执行了 过滤器 
+14:39:04:761  INFO 51558 --- [reactor-http-nio-3] c.hmall.gateway.fillter.MyGlobalFilter   : POST method
+14:39:04:762  INFO 51558 --- [reactor-http-nio-3] c.h.g.f.PrintAnyGatewayFilterFactory     : 执行前置过滤器printAnyFilter...
+14:39:04:926 ERROR 51558 --- [boundedElastic-1] i.n.r.d.DnsServerAddressStreamProviders  : Unable to load io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'. Use DEBUG level to see the full stack: java.lang.UnsatisfiedLinkError: failed to load the required native library
+14:39:05:326  INFO 51558 --- [reactor-http-nio-5] c.h.g.f.PrintAnyGatewayFilterFactory     : 执行后置过滤器printAnyFilter...
+14:39:05:326  INFO 51558 --- [reactor-http-nio-5] c.hmall.gateway.fillter.MyGlobalFilter   : 执行了 过滤器 后置
+14:39:05:413  INFO 51558 --- [nacos-grpc-client-executor-104] com.alibaba.nacos.common.remote.client   : [517c13b6-f270-423e-8983-ca577a72a30e] Receive server push request, request = NotifySubscriberRequest, requestId = 2840
+14:39:05:413  INFO 51558 --- [nacos-grpc-client-executor-104] com.alibaba.nacos.common.remote.client   : [517c13b6-f270-423e-8983-ca577a72a30e] Ack server push request, request = NotifySubscriberRequest, requestId = 2840
+14:39:05:506  INFO 51558 --- [reactor-http-nio-6] c.h.gateway.fillter.AuthGlobalFilter     : 传递给下游服务的用户信息:2
+14:39:05:506  INFO 51558 --- [reactor-http-nio-6] c.hmall.gateway.fillter.MyGlobalFilter   : 执行了 过滤器 
+14:39:05:506  INFO 51558 --- [reactor-http-nio-6] c.hmall.gateway.fillter.MyGlobalFilter   : GET method
+14:39:05:506  INFO 51558 --- [reactor-http-nio-6] c.h.g.f.PrintAnyGatewayFilterFactory     : 执行前置过滤器printAnyFilter...
+14:39:06:112  INFO 51558 --- [nacos-grpc-client-executor-108] com.alibaba.nacos.common.remote.client   : [517c13b6-f270-423e-8983-ca577a72a30e] Receive server push request, request = NotifySubscriberRequest, requestId = 2841
+14:39:06:112  INFO 51558 --- [nacos-grpc-client-executor-108] com.alibaba.nacos.common.remote.client   : [517c13b6-f270-423e-8983-ca577a72a30e] Ack server push request, request = NotifySubscriberRequest, requestId = 2841
+14:39:07:275  INFO 51558 --- [reactor-http-nio-7] c.h.g.f.PrintAnyGatewayFilterFactory     : 执行后置过滤器printAnyFilter...
+14:39:07:275  INFO 51558 --- [reactor-http-nio-7] c.hmall.gateway.fillter.MyGlobalFilter   : 执行了 过滤器 后置
+14:39:10:098  INFO 51558 --- [reactor-http-nio-8] c.h.gateway.fillter.AuthGlobalFilter     : 传递给下游服务的用户信息:2
+14:39:10:099  INFO 51558 --- [reactor-http-nio-8] c.hmall.gateway.fillter.MyGlobalFilter   : 执行了 过滤器 
+14:39:10:099  INFO 51558 --- [reactor-http-nio-8] c.hmall.gateway.fillter.MyGlobalFilter   : GET method
+14:39:10:099  INFO 51558 --- [reactor-http-nio-8] c.h.g.f.PrintAnyGatewayFilterFactory     : 执行前置过滤器printAnyFilter...
+14:39:10:415  INFO 51558 --- [reactor-http-nio-7] c.h.g.f.PrintAnyGatewayFilterFactory     : 执行后置过滤器printAnyFilter...
+14:39:10:416  INFO 51558 --- [reactor-http-nio-7] c.hmall.gateway.fillter.MyGlobalFilter   : 执行了 过滤器 后置
+14:39:12:411  INFO 51558 --- [reactor-http-nio-9] c.hmall.gateway.fillter.MyGlobalFilter   : 执行了 过滤器 
+14:39:12:411  INFO 51558 --- [reactor-http-nio-9] c.hmall.gateway.fillter.MyGlobalFilter   : GET method
+14:39:12:411  INFO 51558 --- [reactor-http-nio-9] c.h.g.f.PrintAnyGatewayFilterFactory     : 执行前置过滤器printAnyFilter...
+14:39:12:827  INFO 51558 --- [reactor-http-nio-10] c.h.g.f.PrintAnyGatewayFilterFactory     : 执行后置过滤器printAnyFilter...
+14:39:12:827  INFO 51558 --- [reactor-http-nio-10] c.hmall.gateway.fillter.MyGlobalFilter   : 执行了 过滤器 后置
+14:39:13:018  INFO 51558 --- [nacos-grpc-client-executor-113] com.alibaba.nacos.common.remote.client   : [517c13b6-f270-423e-8983-ca577a72a30e] Receive server push request, request = NotifySubscriberRequest, requestId = 2843
+14:39:13:018  INFO 51558 --- [nacos-grpc-client-executor-113] com.alibaba.nacos.common.remote.client   : [517c13b6-f270-423e-8983-ca577a72a30e] Ack server push request, request = NotifySubscriberRequest, requestId = 2843
+14:39:14:856  INFO 51558 --- [reactor-http-nio-1] c.h.gateway.fillter.AuthGlobalFilter     : 传递给下游服务的用户信息:2
+14:39:14:856  INFO 51558 --- [reactor-http-nio-1] c.hmall.gateway.fillter.MyGlobalFilter   : 执行了 过滤器 
+14:39:14:856  INFO 51558 --- [reactor-http-nio-1] c.hmall.gateway.fillter.MyGlobalFilter   : POST method
+14:39:14:856  INFO 51558 --- [reactor-http-nio-1] c.h.g.f.PrintAnyGatewayFilterFactory     : 执行前置过滤器printAnyFilter...
+14:39:15:189  INFO 51558 --- [reactor-http-nio-7] c.h.g.f.PrintAnyGatewayFilterFactory     : 执行后置过滤器printAnyFilter...
+14:39:15:190  INFO 51558 --- [reactor-http-nio-7] c.hmall.gateway.fillter.MyGlobalFilter   : 执行了 过滤器 后置
+14:39:15:359  INFO 51558 --- [reactor-http-nio-2] c.h.gateway.fillter.AuthGlobalFilter     : 传递给下游服务的用户信息:2
+14:39:15:360  INFO 51558 --- [reactor-http-nio-2] c.hmall.gateway.fillter.MyGlobalFilter   : 执行了 过滤器 
+14:39:15:360  INFO 51558 --- [reactor-http-nio-2] c.hmall.gateway.fillter.MyGlobalFilter   : GET method
+14:39:15:360  INFO 51558 --- [reactor-http-nio-2] c.h.g.f.PrintAnyGatewayFilterFactory     : 执行前置过滤器printAnyFilter...
+14:39:15:600  INFO 51558 --- [reactor-http-nio-7] c.h.g.f.PrintAnyGatewayFilterFactory     : 执行后置过滤器printAnyFilter...
+14:39:15:600  INFO 51558 --- [reactor-http-nio-7] c.hmall.gateway.fillter.MyGlobalFilter   : 执行了 过滤器 后置
+14:39:20:430  INFO 51558 --- [reactor-http-nio-3] c.h.gateway.fillter.AuthGlobalFilter     : 传递给下游服务的用户信息:2
+14:39:20:431  INFO 51558 --- [reactor-http-nio-3] c.hmall.gateway.fillter.MyGlobalFilter   : 执行了 过滤器 
+14:39:20:431  INFO 51558 --- [reactor-http-nio-3] c.hmall.gateway.fillter.MyGlobalFilter   : GET method
+14:39:20:431  INFO 51558 --- [reactor-http-nio-3] c.h.g.f.PrintAnyGatewayFilterFactory     : 执行前置过滤器printAnyFilter...
+14:39:20:613  INFO 51558 --- [reactor-http-nio-5] c.h.g.f.PrintAnyGatewayFilterFactory     : 执行后置过滤器printAnyFilter...
+14:39:20:614  INFO 51558 --- [reactor-http-nio-5] c.hmall.gateway.fillter.MyGlobalFilter   : 执行了 过滤器 后置
+14:39:24:762  INFO 51558 --- [reactor-http-nio-4] c.h.gateway.fillter.AuthGlobalFilter     : 传递给下游服务的用户信息:2
+14:39:24:763  INFO 51558 --- [reactor-http-nio-4] c.hmall.gateway.fillter.MyGlobalFilter   : 执行了 过滤器 
+14:39:24:763  INFO 51558 --- [reactor-http-nio-4] c.hmall.gateway.fillter.MyGlobalFilter   : POST method
+14:39:24:764  INFO 51558 --- [reactor-http-nio-4] c.h.g.f.PrintAnyGatewayFilterFactory     : 执行前置过滤器printAnyFilter...
+14:39:25:427  INFO 51558 --- [nacos-grpc-client-executor-122] com.alibaba.nacos.common.remote.client   : [517c13b6-f270-423e-8983-ca577a72a30e] Receive server push request, request = NotifySubscriberRequest, requestId = 2844
+14:39:25:428  INFO 51558 --- [nacos-grpc-client-executor-122] com.alibaba.nacos.common.remote.client   : [517c13b6-f270-423e-8983-ca577a72a30e] Ack server push request, request = NotifySubscriberRequest, requestId = 2844
+14:39:27:049  INFO 51558 --- [reactor-http-nio-5] c.h.g.f.PrintAnyGatewayFilterFactory     : 执行后置过滤器printAnyFilter...
+14:39:27:049  INFO 51558 --- [reactor-http-nio-5] c.hmall.gateway.fillter.MyGlobalFilter   : 执行了 过滤器 后置
+14:39:31:156  INFO 51558 --- [reactor-http-nio-6] c.h.gateway.fillter.AuthGlobalFilter     : 传递给下游服务的用户信息:2
+14:39:31:157  INFO 51558 --- [reactor-http-nio-6] c.hmall.gateway.fillter.MyGlobalFilter   : 执行了 过滤器 
+14:39:31:157  INFO 51558 --- [reactor-http-nio-6] c.hmall.gateway.fillter.MyGlobalFilter   : POST method
+14:39:31:157  INFO 51558 --- [reactor-http-nio-6] c.h.g.f.PrintAnyGatewayFilterFactory     : 执行前置过滤器printAnyFilter...
+14:39:33:042  INFO 51558 --- [reactor-http-nio-5] c.h.g.f.PrintAnyGatewayFilterFactory     : 执行后置过滤器printAnyFilter...
+14:39:33:042  INFO 51558 --- [reactor-http-nio-5] c.hmall.gateway.fillter.MyGlobalFilter   : 执行了 过滤器 后置
+14:43:37:050  INFO 51558 --- [reactor-http-nio-7] c.h.gateway.fillter.AuthGlobalFilter     : 传递给下游服务的用户信息:2
+14:43:37:051  INFO 51558 --- [reactor-http-nio-7] c.hmall.gateway.fillter.MyGlobalFilter   : 执行了 过滤器 
+14:43:37:052  INFO 51558 --- [reactor-http-nio-7] c.hmall.gateway.fillter.MyGlobalFilter   : POST method
+14:43:37:052  INFO 51558 --- [reactor-http-nio-7] c.h.g.f.PrintAnyGatewayFilterFactory     : 执行前置过滤器printAnyFilter...
+14:43:38:948  INFO 51558 --- [reactor-http-nio-8] c.h.g.f.PrintAnyGatewayFilterFactory     : 执行后置过滤器printAnyFilter...
+14:43:38:948  INFO 51558 --- [reactor-http-nio-8] c.hmall.gateway.fillter.MyGlobalFilter   : 执行了 过滤器 后置
+14:43:45:519  INFO 51558 --- [reactor-http-nio-10] c.hmall.gateway.fillter.MyGlobalFilter   : 执行了 过滤器 
+14:43:45:520  INFO 51558 --- [reactor-http-nio-10] c.hmall.gateway.fillter.MyGlobalFilter   : POST method
+14:43:45:520  INFO 51558 --- [reactor-http-nio-10] c.h.g.f.PrintAnyGatewayFilterFactory     : 执行前置过滤器printAnyFilter...
+14:43:45:800  INFO 51558 --- [reactor-http-nio-1] c.h.g.f.PrintAnyGatewayFilterFactory     : 执行后置过滤器printAnyFilter...
+14:43:45:800  INFO 51558 --- [reactor-http-nio-1] c.hmall.gateway.fillter.MyGlobalFilter   : 执行了 过滤器 后置
+14:43:45:955  INFO 51558 --- [reactor-http-nio-2] c.h.gateway.fillter.AuthGlobalFilter     : 传递给下游服务的用户信息:2
+14:43:45:956  INFO 51558 --- [reactor-http-nio-2] c.hmall.gateway.fillter.MyGlobalFilter   : 执行了 过滤器 
+14:43:45:956  INFO 51558 --- [reactor-http-nio-2] c.hmall.gateway.fillter.MyGlobalFilter   : GET method
+14:43:45:956  INFO 51558 --- [reactor-http-nio-2] c.h.g.f.PrintAnyGatewayFilterFactory     : 执行前置过滤器printAnyFilter...
+14:43:46:037  INFO 51558 --- [reactor-http-nio-1] c.h.g.f.PrintAnyGatewayFilterFactory     : 执行后置过滤器printAnyFilter...
+14:43:46:038  INFO 51558 --- [reactor-http-nio-1] c.hmall.gateway.fillter.MyGlobalFilter   : 执行了 过滤器 后置
+14:45:58:305  INFO 51558 --- [reactor-http-nio-3] c.hmall.gateway.fillter.MyGlobalFilter   : 执行了 过滤器 
+14:45:58:306  INFO 51558 --- [reactor-http-nio-3] c.hmall.gateway.fillter.MyGlobalFilter   : GET method
+14:45:58:307  INFO 51558 --- [reactor-http-nio-3] c.h.g.f.PrintAnyGatewayFilterFactory     : 执行前置过滤器printAnyFilter...
+14:45:58:366  INFO 51558 --- [reactor-http-nio-5] c.hmall.gateway.fillter.MyGlobalFilter   : 执行了 过滤器 
+14:45:58:366  INFO 51558 --- [reactor-http-nio-5] c.hmall.gateway.fillter.MyGlobalFilter   : GET method
+14:45:58:366  INFO 51558 --- [reactor-http-nio-5] c.h.g.f.PrintAnyGatewayFilterFactory     : 执行前置过滤器printAnyFilter...
+14:45:58:609  INFO 51558 --- [reactor-http-nio-5] c.h.g.f.PrintAnyGatewayFilterFactory     : 执行后置过滤器printAnyFilter...
+14:45:58:610  INFO 51558 --- [reactor-http-nio-5] c.hmall.gateway.fillter.MyGlobalFilter   : 执行了 过滤器 后置
+14:45:58:616  INFO 51558 --- [reactor-http-nio-4] c.h.g.f.PrintAnyGatewayFilterFactory     : 执行后置过滤器printAnyFilter...
+14:45:58:616  INFO 51558 --- [reactor-http-nio-4] c.hmall.gateway.fillter.MyGlobalFilter   : 执行了 过滤器 后置
+14:48:03:598  WARN 51558 --- [reactor-http-nio-6] c.h.gateway.fillter.AuthGlobalFilter     : 身份校验失败，拦截请求: /api/addresses，原因: 未登录
+15:21:48:353  WARN 51558 --- [Thread-5] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+15:21:48:355  WARN 51558 --- [Thread-5] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+15:21:48:354  WARN 51558 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+15:21:48:357  WARN 51558 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+15:21:48:455  INFO 51558 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+15:21:48:526  INFO 51558 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+15:21:48:837  INFO 51558 --- [SpringApplicationShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown rpc client, set status to shutdown
+15:21:48:838  INFO 51558 --- [SpringApplicationShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown client event executor java.util.concurrent.ScheduledThreadPoolExecutor@183413a[Running, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 0]
+15:21:48:838  INFO 51558 --- [SpringApplicationShutdownHook] com.alibaba.nacos.common.remote.client   : Close current connection 1765521312851_218.84.124.14_4709
+15:21:48:841  INFO 51558 --- [SpringApplicationShutdownHook] c.a.n.c.remote.client.grpc.GrpcClient    : Shutdown grpc executor java.util.concurrent.ThreadPoolExecutor@71cbc8c8[Running, pool size = 3, active threads = 0, queued tasks = 0, completed tasks = 943]
+16:09:17:592  INFO 54989 --- [main] com.hmall.gateway.GatewayApplication     : The following 1 profile is active: "dev"
+16:09:17:890  INFO 54989 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=60c7d69e-f7bd-33bc-a4d5-1a0226149efd
+16:09:17:986  INFO 54989 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+16:09:17:986  INFO 54989 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+16:09:17:987  INFO 54989 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+16:09:18:529  INFO 54989 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [After]
+16:09:18:529  INFO 54989 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Before]
+16:09:18:529  INFO 54989 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Between]
+16:09:18:529  INFO 54989 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Cookie]
+16:09:18:529  INFO 54989 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Header]
+16:09:18:529  INFO 54989 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Host]
+16:09:18:529  INFO 54989 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Method]
+16:09:18:529  INFO 54989 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Path]
+16:09:18:529  INFO 54989 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Query]
+16:09:18:529  INFO 54989 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [ReadBody]
+16:09:18:529  INFO 54989 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [RemoteAddr]
+16:09:18:529  INFO 54989 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [XForwardedRemoteAddr]
+16:09:18:529  INFO 54989 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Weight]
+16:09:18:529  INFO 54989 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [CloudFoundryRouteService]
+16:09:18:583  INFO 54989 --- [main] c.a.c.s.SentinelWebFluxAutoConfiguration : [Sentinel Starter] register Sentinel SentinelWebFluxFilter
+16:09:18:685  INFO 54989 --- [main] com.alibaba.nacos.common.remote.client   : [RpcClientFactory] create a new rpc client of 44e83c2c-30f1-43ee-90e2-1da6cb84f3f7
+16:09:18:686  INFO 54989 --- [main] com.alibaba.nacos.common.remote.client   : [44e83c2c-30f1-43ee-90e2-1da6cb84f3f7] RpcClient init label, labels = {module=naming, source=sdk}
+16:09:18:686  INFO 54989 --- [main] com.alibaba.nacos.common.remote.client   : [44e83c2c-30f1-43ee-90e2-1da6cb84f3f7] RpcClient init, ServerListFactory = com.alibaba.nacos.client.naming.core.ServerListManager
+16:09:18:686  INFO 54989 --- [main] com.alibaba.nacos.common.remote.client   : [44e83c2c-30f1-43ee-90e2-1da6cb84f3f7] Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.redo.NamingGrpcRedoService
+16:09:18:687  INFO 54989 --- [main] com.alibaba.nacos.common.remote.client   : [44e83c2c-30f1-43ee-90e2-1da6cb84f3f7] Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
+16:09:18:687  INFO 54989 --- [main] com.alibaba.nacos.common.remote.client   : [44e83c2c-30f1-43ee-90e2-1da6cb84f3f7] Try to connect to server on start up, server: {serverIp = '49.235.39.92', server main port = 8848}
+16:09:19:001  INFO 54989 --- [main] com.alibaba.nacos.common.remote.client   : [44e83c2c-30f1-43ee-90e2-1da6cb84f3f7] Success to connect to server [49.235.39.92:8848] on start up, connectionId = 1765526959057_218.84.124.14_3352
+16:09:19:001  INFO 54989 --- [main] com.alibaba.nacos.common.remote.client   : [44e83c2c-30f1-43ee-90e2-1da6cb84f3f7] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+16:09:19:001  INFO 54989 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [44e83c2c-30f1-43ee-90e2-1da6cb84f3f7] Notify connected event to listeners.
+16:09:19:001  INFO 54989 --- [main] com.alibaba.nacos.common.remote.client   : [44e83c2c-30f1-43ee-90e2-1da6cb84f3f7] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$463/0x00000008004c6040
+16:09:19:130  INFO 54989 --- [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 18080
+16:09:19:208  INFO 54989 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP hm-gateway 192.168.1.3:18080 register finished
+16:09:19:219  INFO 54989 --- [main] com.hmall.gateway.GatewayApplication     : Started GatewayApplication in 3.413 seconds (JVM running for 3.91)
+16:09:19:221  INFO 54989 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=hm-gateway-dev.yaml, group=DEFAULT_GROUP
+16:09:19:221  INFO 54989 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=hm-gateway, group=DEFAULT_GROUP
+16:09:19:221  INFO 54989 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=hm-gateway.yaml, group=DEFAULT_GROUP
+16:09:19:581  INFO 54989 --- [nacos-grpc-client-executor-9] com.alibaba.nacos.common.remote.client   : [44e83c2c-30f1-43ee-90e2-1da6cb84f3f7] Receive server push request, request = NotifySubscriberRequest, requestId = 2848
+16:09:19:589  INFO 54989 --- [nacos-grpc-client-executor-9] com.alibaba.nacos.common.remote.client   : [44e83c2c-30f1-43ee-90e2-1da6cb84f3f7] Ack server push request, request = NotifySubscriberRequest, requestId = 2848
+16:09:37:282  WARN 54989 --- [reactor-http-nio-2] c.h.gateway.fillter.AuthGlobalFilter     : 身份校验失败，拦截请求: /api/addresses，原因: 无效的token
+16:09:40:710  INFO 54989 --- [reactor-http-nio-3] c.hmall.gateway.fillter.MyGlobalFilter   : 执行了 过滤器 
+16:09:40:710  INFO 54989 --- [reactor-http-nio-3] c.hmall.gateway.fillter.MyGlobalFilter   : POST method
+16:09:40:718  INFO 54989 --- [reactor-http-nio-3] c.h.g.f.PrintAnyGatewayFilterFactory     : 执行前置过滤器printAnyFilter...
+16:09:40:865 ERROR 54989 --- [boundedElastic-1] i.n.r.d.DnsServerAddressStreamProviders  : Unable to load io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'. Use DEBUG level to see the full stack: java.lang.UnsatisfiedLinkError: failed to load the required native library
+16:09:41:263  INFO 54989 --- [reactor-http-nio-5] c.h.g.f.PrintAnyGatewayFilterFactory     : 执行后置过滤器printAnyFilter...
+16:09:41:263  INFO 54989 --- [reactor-http-nio-5] c.hmall.gateway.fillter.MyGlobalFilter   : 执行了 过滤器 后置
+16:09:41:391  INFO 54989 --- [nacos-grpc-client-executor-20] com.alibaba.nacos.common.remote.client   : [44e83c2c-30f1-43ee-90e2-1da6cb84f3f7] Receive server push request, request = NotifySubscriberRequest, requestId = 2851
+16:09:41:391  INFO 54989 --- [nacos-grpc-client-executor-20] com.alibaba.nacos.common.remote.client   : [44e83c2c-30f1-43ee-90e2-1da6cb84f3f7] Ack server push request, request = NotifySubscriberRequest, requestId = 2851
+16:09:41:455  INFO 54989 --- [reactor-http-nio-6] c.h.gateway.fillter.AuthGlobalFilter     : 传递给下游服务的用户信息:2
+16:09:41:455  INFO 54989 --- [reactor-http-nio-6] c.hmall.gateway.fillter.MyGlobalFilter   : 执行了 过滤器 
+16:09:41:456  INFO 54989 --- [reactor-http-nio-6] c.hmall.gateway.fillter.MyGlobalFilter   : GET method
+16:09:41:456  INFO 54989 --- [reactor-http-nio-6] c.h.g.f.PrintAnyGatewayFilterFactory     : 执行前置过滤器printAnyFilter...
+16:09:41:546  INFO 54989 --- [reactor-http-nio-5] c.h.g.f.PrintAnyGatewayFilterFactory     : 执行后置过滤器printAnyFilter...
+16:09:41:546  INFO 54989 --- [reactor-http-nio-5] c.hmall.gateway.fillter.MyGlobalFilter   : 执行了 过滤器 后置
+16:10:38:726  INFO 54989 --- [reactor-http-nio-7] c.h.gateway.fillter.AuthGlobalFilter     : 传递给下游服务的用户信息:2
+16:10:38:727  INFO 54989 --- [reactor-http-nio-7] c.hmall.gateway.fillter.MyGlobalFilter   : 执行了 过滤器 
+16:10:38:727  INFO 54989 --- [reactor-http-nio-7] c.hmall.gateway.fillter.MyGlobalFilter   : GET method
+16:10:38:727  INFO 54989 --- [reactor-http-nio-7] c.h.g.f.PrintAnyGatewayFilterFactory     : 执行前置过滤器printAnyFilter...
+16:10:39:143  INFO 54989 --- [reactor-http-nio-8] c.h.g.f.PrintAnyGatewayFilterFactory     : 执行后置过滤器printAnyFilter...
+16:10:39:143  INFO 54989 --- [reactor-http-nio-8] c.hmall.gateway.fillter.MyGlobalFilter   : 执行了 过滤器 后置
+16:10:39:337  INFO 54989 --- [nacos-grpc-client-executor-45] com.alibaba.nacos.common.remote.client   : [44e83c2c-30f1-43ee-90e2-1da6cb84f3f7] Receive server push request, request = NotifySubscriberRequest, requestId = 2852
+16:10:39:337  INFO 54989 --- [nacos-grpc-client-executor-45] com.alibaba.nacos.common.remote.client   : [44e83c2c-30f1-43ee-90e2-1da6cb84f3f7] Ack server push request, request = NotifySubscriberRequest, requestId = 2852
+16:24:14:208  WARN 54989 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+16:24:14:208  WARN 54989 --- [Thread-5] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+16:24:14:209  WARN 54989 --- [Thread-5] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+16:24:14:210  WARN 54989 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+16:24:14:298  INFO 54989 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+16:24:14:368  INFO 54989 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+16:24:14:685  INFO 54989 --- [SpringApplicationShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown rpc client, set status to shutdown
+16:24:14:685  INFO 54989 --- [SpringApplicationShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown client event executor java.util.concurrent.ScheduledThreadPoolExecutor@35caa559[Running, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 0]
+16:24:14:685  INFO 54989 --- [SpringApplicationShutdownHook] com.alibaba.nacos.common.remote.client   : Close current connection 1765526959057_218.84.124.14_3352
+16:24:14:696  INFO 54989 --- [SpringApplicationShutdownHook] c.a.n.c.remote.client.grpc.GrpcClient    : Shutdown grpc executor java.util.concurrent.ThreadPoolExecutor@3db1d30[Running, pool size = 7, active threads = 0, queued tasks = 0, completed tasks = 380]

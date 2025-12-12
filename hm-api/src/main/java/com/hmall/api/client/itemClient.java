@@ -4,6 +4,7 @@ package com.hmall.api.client;
 import com.hmall.api.config.DefaultFeignConfig;
 import com.hmall.api.dto.ItemDTO;
 import com.hmall.api.dto.OrderDetailDTO;
+import com.hmall.api.fallback.itemClientFallback;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -14,6 +15,7 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Set;
 @FeignClient(value = "item-service",
+        fallbackFactory = itemClientFallback.class,
         configuration = DefaultFeignConfig.class)
 public interface itemClient {
 
