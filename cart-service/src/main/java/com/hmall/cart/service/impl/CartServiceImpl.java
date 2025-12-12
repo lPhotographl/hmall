@@ -35,8 +35,7 @@ import java.util.stream.Collectors;
 @Service
 @RequiredArgsConstructor
 @Slf4j
-@EnableConfigurationProperties(cartProperties.class)
-public class CartServiceImpl extends ServiceImpl<CartMapper, Cart> implements ICartService {
+ public class CartServiceImpl extends ServiceImpl<CartMapper, Cart> implements ICartService {
 
     private final itemClient itemClient;
 
@@ -133,8 +132,16 @@ public class CartServiceImpl extends ServiceImpl<CartMapper, Cart> implements IC
 
     private void checkCartsFull(Long userId) {
         int count = lambdaQuery().eq(Cart::getUserId, userId).count();
-        if (count >= cartProperties.getMaxAmount()) {
-            throw new BizIllegalException(StrUtil.format("用户购物车课程不能超过{}", cartProperties.getMaxAmount()));
+
+        // ⬇️ 修复：添加空值检查 (Defensive Check)
+        int maxAmount = 10; // 设定一个安全的默认值，防止配置失败
+
+        if (cartProperties != null) {
+            maxAmount = cartProperties.getMaxAmount();
+        }
+
+        if (count >= maxAmount) {
+            throw new BizIllegalException(StrUtil.format("用户购物车课程不能超过{}", maxAmount));
         }
     }
 
