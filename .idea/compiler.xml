@@ -13,11 +13,13 @@
         <module name="hm-common" />
         <module name="item-service" />
         <module name="hm-user" />
-        <module name="hm-service" />
         <module name="hm-GateWay" />
         <module name="hm-api" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="hm-service" target="11" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">

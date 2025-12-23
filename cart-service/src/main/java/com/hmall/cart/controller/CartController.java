@@ -46,7 +46,6 @@ public class CartController {
     @GetMapping
     public List<CartVO> queryMyCarts(){
         log.info("查询用户购物车列表");
-
         return cartService.queryMyCarts();
     }
 

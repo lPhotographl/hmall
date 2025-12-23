@@ -2562,3 +2562,74 @@ Caused by: com.alibaba.nacos.api.exception.NacosException: Client not connected,
 15:20:54:301  INFO 3086 --- [nacos-grpc-client-executor-9] com.alibaba.nacos.common.remote.client   : [6b8bc888-792c-4138-9258-4e5758d1a923] Ack server push request, request = NotifySubscriberRequest, requestId = 3
 15:20:54:315  INFO 3086 --- [RMI TCP Connection(4)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
 15:20:54:487  INFO 3086 --- [RMI TCP Connection(4)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+17:18:38:493  INFO 3086 --- [http-nio-8085-exec-1] c.h.common.config.UserinfoInterceptor    : =================================================
+17:18:38:494  INFO 3086 --- [http-nio-8085-exec-1] c.h.common.config.UserinfoInterceptor    : >>>>> 拦截器启动！当前路径: /orders
+17:18:38:494  INFO 3086 --- [http-nio-8085-exec-1] c.h.common.config.UserinfoInterceptor    : >>>>> 获取到的 user-info 头信息: 1
+17:18:38:494  INFO 3086 --- [http-nio-8085-exec-1] c.h.common.config.UserinfoInterceptor    : =================================================
+17:18:38:534 DEBUG 3086 --- [http-nio-8085-exec-1] com.hmall.api.client.itemClient          : [itemClient#queryItemByIds] ---> GET http://item-service/items?ids=14741770661 HTTP/1.1
+17:18:38:534 DEBUG 3086 --- [http-nio-8085-exec-1] com.hmall.api.client.itemClient          : [itemClient#queryItemByIds] user-info: 1
+17:18:38:534 DEBUG 3086 --- [http-nio-8085-exec-1] com.hmall.api.client.itemClient          : [itemClient#queryItemByIds] ---> END HTTP (0-byte body)
+17:18:38:622 DEBUG 3086 --- [http-nio-8085-exec-1] com.hmall.api.client.itemClient          : [itemClient#queryItemByIds] <--- HTTP/1.1 200  (87ms)
+17:18:38:622 DEBUG 3086 --- [http-nio-8085-exec-1] com.hmall.api.client.itemClient          : [itemClient#queryItemByIds] connection: keep-alive
+17:18:38:622 DEBUG 3086 --- [http-nio-8085-exec-1] com.hmall.api.client.itemClient          : [itemClient#queryItemByIds] content-type: application/json
+17:18:38:622 DEBUG 3086 --- [http-nio-8085-exec-1] com.hmall.api.client.itemClient          : [itemClient#queryItemByIds] date: Sun, 21 Dec 2025 09:18:38 GMT
+17:18:38:622 DEBUG 3086 --- [http-nio-8085-exec-1] com.hmall.api.client.itemClient          : [itemClient#queryItemByIds] keep-alive: timeout=60
+17:18:38:622 DEBUG 3086 --- [http-nio-8085-exec-1] com.hmall.api.client.itemClient          : [itemClient#queryItemByIds] transfer-encoding: chunked
+17:18:38:622 DEBUG 3086 --- [http-nio-8085-exec-1] com.hmall.api.client.itemClient          : [itemClient#queryItemByIds] 
+17:18:38:622 DEBUG 3086 --- [http-nio-8085-exec-1] com.hmall.api.client.itemClient          : [itemClient#queryItemByIds] [{"id":"14741770661","name":"康佳（KONKA） LED49UC3 49英寸超薄曲面36核4K HDR人工智能电视","price":144600,"stock":9994,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t16477/84/2032772431/400946/2887be91/5a912776N7e343ec3.jpg!q70.jpg.webp","category":"曲面电视","brand":"康佳","spec":"{}","sold":0,"commentCount":0,"isAD":false,"status":1}]
+17:18:38:622 DEBUG 3086 --- [http-nio-8085-exec-1] com.hmall.api.client.itemClient          : [itemClient#queryItemByIds] <--- END HTTP (370-byte body)
+17:18:38:640 DEBUG 3086 --- [http-nio-8085-exec-1] c.hmall.trade.mapper.OrderMapper.insert  : ==>  Preparing: INSERT INTO `order` ( id, total_fee, payment_type, user_id, status ) VALUES ( ?, ?, ?, ?, ? )
+17:18:38:649 DEBUG 3086 --- [http-nio-8085-exec-1] c.hmall.trade.mapper.OrderMapper.insert  : ==> Parameters: 2002670034276581377(Long), 144600(Integer), 3(Integer), 1(Long), 1(Integer)
+17:18:38:714 DEBUG 3086 --- [http-nio-8085-exec-1] c.hmall.trade.mapper.OrderMapper.insert  : <==    Updates: 1
+17:18:38:718 DEBUG 3086 --- [http-nio-8085-exec-1] c.h.t.mapper.OrderDetailMapper.insert    : ==>  Preparing: INSERT INTO order_detail ( order_id, item_id, num, name, spec, price, image ) VALUES ( ?, ?, ?, ?, ?, ?, ? )
+17:18:38:719 DEBUG 3086 --- [http-nio-8085-exec-1] c.h.t.mapper.OrderDetailMapper.insert    : ==> Parameters: 2002670034276581377(Long), 14741770661(Long), 1(Integer), 康佳（KONKA） LED49UC3 49英寸超薄曲面36核4K HDR人工智能电视(String), {}(String), 144600(Integer), https://m.360buyimg.com/mobilecms/s720x720_jfs/t16477/84/2032772431/400946/2887be91/5a912776N7e343ec3.jpg!q70.jpg.webp(String)
+17:18:38:739 DEBUG 3086 --- [http-nio-8085-exec-1] com.hmall.api.client.cartClient          : [cartClient#removeByItemIds] ---> DELETE http://cart-service/carts?ids=14741770661 HTTP/1.1
+17:18:38:739 DEBUG 3086 --- [http-nio-8085-exec-1] com.hmall.api.client.cartClient          : [cartClient#removeByItemIds] user-info: 1
+17:18:38:739 DEBUG 3086 --- [http-nio-8085-exec-1] com.hmall.api.client.cartClient          : [cartClient#removeByItemIds] ---> END HTTP (0-byte body)
+17:18:38:831 DEBUG 3086 --- [http-nio-8085-exec-1] com.hmall.api.client.cartClient          : [cartClient#removeByItemIds] <--- HTTP/1.1 200  (92ms)
+17:18:38:831 DEBUG 3086 --- [http-nio-8085-exec-1] com.hmall.api.client.cartClient          : [cartClient#removeByItemIds] connection: keep-alive
+17:18:38:831 DEBUG 3086 --- [http-nio-8085-exec-1] com.hmall.api.client.cartClient          : [cartClient#removeByItemIds] content-length: 0
+17:18:38:831 DEBUG 3086 --- [http-nio-8085-exec-1] com.hmall.api.client.cartClient          : [cartClient#removeByItemIds] date: Sun, 21 Dec 2025 09:18:38 GMT
+17:18:38:831 DEBUG 3086 --- [http-nio-8085-exec-1] com.hmall.api.client.cartClient          : [cartClient#removeByItemIds] keep-alive: timeout=60
+17:18:38:831 DEBUG 3086 --- [http-nio-8085-exec-1] com.hmall.api.client.cartClient          : [cartClient#removeByItemIds] <--- END HTTP (0-byte body)
+17:18:38:838 DEBUG 3086 --- [http-nio-8085-exec-1] com.hmall.api.client.itemClient          : [itemClient#deductStock] ---> PUT http://item-service/items/stock/deduct HTTP/1.1
+17:18:38:838 DEBUG 3086 --- [http-nio-8085-exec-1] com.hmall.api.client.itemClient          : [itemClient#deductStock] Content-Length: 34
+17:18:38:838 DEBUG 3086 --- [http-nio-8085-exec-1] com.hmall.api.client.itemClient          : [itemClient#deductStock] Content-Type: application/json
+17:18:38:838 DEBUG 3086 --- [http-nio-8085-exec-1] com.hmall.api.client.itemClient          : [itemClient#deductStock] user-info: 1
+17:18:38:838 DEBUG 3086 --- [http-nio-8085-exec-1] com.hmall.api.client.itemClient          : [itemClient#deductStock] 
+17:18:38:838 DEBUG 3086 --- [http-nio-8085-exec-1] com.hmall.api.client.itemClient          : [itemClient#deductStock] [{"itemId":"14741770661","num":1}]
+17:18:38:838 DEBUG 3086 --- [http-nio-8085-exec-1] com.hmall.api.client.itemClient          : [itemClient#deductStock] ---> END HTTP (34-byte body)
+17:18:39:059 DEBUG 3086 --- [http-nio-8085-exec-1] com.hmall.api.client.itemClient          : [itemClient#deductStock] <--- HTTP/1.1 200  (220ms)
+17:18:39:059 DEBUG 3086 --- [http-nio-8085-exec-1] com.hmall.api.client.itemClient          : [itemClient#deductStock] connection: keep-alive
+17:18:39:059 DEBUG 3086 --- [http-nio-8085-exec-1] com.hmall.api.client.itemClient          : [itemClient#deductStock] content-length: 0
+17:18:39:059 DEBUG 3086 --- [http-nio-8085-exec-1] com.hmall.api.client.itemClient          : [itemClient#deductStock] date: Sun, 21 Dec 2025 09:18:38 GMT
+17:18:39:059 DEBUG 3086 --- [http-nio-8085-exec-1] com.hmall.api.client.itemClient          : [itemClient#deductStock] keep-alive: timeout=60
+17:18:39:059 DEBUG 3086 --- [http-nio-8085-exec-1] com.hmall.api.client.itemClient          : [itemClient#deductStock] <--- END HTTP (0-byte body)
+17:18:39:177  INFO 3086 --- [nacos-grpc-client-executor-1814] com.alibaba.nacos.common.remote.client   : [6b8bc888-792c-4138-9258-4e5758d1a923] Receive server push request, request = NotifySubscriberRequest, requestId = 18
+17:18:39:177  INFO 3086 --- [nacos-grpc-client-executor-1814] com.alibaba.nacos.common.remote.client   : [6b8bc888-792c-4138-9258-4e5758d1a923] Ack server push request, request = NotifySubscriberRequest, requestId = 18
+17:18:39:276  INFO 3086 --- [nacos-grpc-client-executor-1815] com.alibaba.nacos.common.remote.client   : [6b8bc888-792c-4138-9258-4e5758d1a923] Receive server push request, request = NotifySubscriberRequest, requestId = 19
+17:18:39:277  INFO 3086 --- [nacos-grpc-client-executor-1815] com.alibaba.nacos.common.remote.client   : [6b8bc888-792c-4138-9258-4e5758d1a923] Ack server push request, request = NotifySubscriberRequest, requestId = 19
+17:18:39:565  INFO 3086 --- [http-nio-8085-exec-2] c.h.common.config.UserinfoInterceptor    : =================================================
+17:18:39:565  INFO 3086 --- [http-nio-8085-exec-2] c.h.common.config.UserinfoInterceptor    : >>>>> 拦截器启动！当前路径: /orders/2002670034276581377
+17:18:39:565  INFO 3086 --- [http-nio-8085-exec-2] c.h.common.config.UserinfoInterceptor    : >>>>> 获取到的 user-info 头信息: 1
+17:18:39:566  INFO 3086 --- [http-nio-8085-exec-2] c.h.common.config.UserinfoInterceptor    : =================================================
+17:18:39:576 DEBUG 3086 --- [http-nio-8085-exec-2] c.h.trade.mapper.OrderMapper.selectById  : ==>  Preparing: SELECT id,total_fee,payment_type,user_id,status,create_time,pay_time,consign_time,end_time,close_time,comment_time,update_time FROM `order` WHERE id=?
+17:18:39:576 DEBUG 3086 --- [http-nio-8085-exec-2] c.h.trade.mapper.OrderMapper.selectById  : ==> Parameters: 2002670034276581377(Long)
+17:18:39:593 DEBUG 3086 --- [http-nio-8085-exec-2] c.h.trade.mapper.OrderMapper.selectById  : <==      Total: 1
+17:24:04:322  INFO 3086 --- [nacos-grpc-client-executor-1899] com.alibaba.nacos.common.remote.client   : [6b8bc888-792c-4138-9258-4e5758d1a923] Receive server push request, request = NotifySubscriberRequest, requestId = 22
+17:24:04:325  INFO 3086 --- [nacos-grpc-client-executor-1899] com.alibaba.nacos.common.remote.client   : [6b8bc888-792c-4138-9258-4e5758d1a923] Ack server push request, request = NotifySubscriberRequest, requestId = 22
+17:24:08:304  WARN 3086 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+17:24:08:304  WARN 3086 --- [Thread-5] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+17:24:08:304  WARN 3086 --- [Thread-5] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+17:24:08:306  WARN 3086 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+17:24:08:317  INFO 3086 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+17:24:09:183  INFO 3086 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+17:24:09:218  INFO 3086 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+17:24:09:224  INFO 3086 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+17:24:09:537  INFO 3086 --- [SpringApplicationShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown rpc client, set status to shutdown
+17:24:09:538  INFO 3086 --- [SpringApplicationShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown client event executor java.util.concurrent.ScheduledThreadPoolExecutor@5bfc3a3b[Running, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 0]
+17:24:09:538  INFO 3086 --- [SpringApplicationShutdownHook] com.alibaba.nacos.common.remote.client   : Close current connection 1766301655964_192.168.28.95_56580
+17:24:09:541  INFO 3086 --- [SpringApplicationShutdownHook] c.a.n.c.remote.client.grpc.GrpcClient    : Shutdown grpc executor java.util.concurrent.ThreadPoolExecutor@1eb112e7[Running, pool size = 3, active threads = 0, queued tasks = 0, completed tasks = 1902]
+17:24:09:548  INFO 3086 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+17:24:09:550  INFO 3086 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+17:24:09:592  INFO 3086 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
